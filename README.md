@@ -10,18 +10,19 @@
 ## 2. Maven Overview (0.5)
 - Build cycle
 - Dependencies
-- Uber-jar pattern
+- Über-jar pattern
 ## 3. IDEA Overview (0.5)
 - Building
 - Debugging
 ## 4. Java Syntax Basics for Procedure Style (3)
-- Naming conventions 
+- Naming conventions
 - Code style conventions 
 - Static modifier
+- Enums
+- Flow control structures
 - Primitive types
 - Operators 
 - Casting 
-- Flow control structures
 ## 5. JUnit recap (1)
 - Test structure
 - Tests as specifications
@@ -30,8 +31,8 @@
 - Parameter passing styles
 - Arrays 
 - Strings 
+- Wrappers
 ## 7. Java Syntax Basics for OOP (3)
-- Enums
 - Visibility
 - Constructor 
 - Inheritance 
