@@ -12,6 +12,7 @@
 - Build cycle
 - Dependencies
 - Über-jar pattern
+POM structure
 
 ## 3. IDEA Overview (0.5)
 - Building
