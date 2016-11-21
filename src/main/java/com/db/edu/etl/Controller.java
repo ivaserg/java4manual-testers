@@ -19,12 +19,15 @@ public class Controller {
             case EIS2_DATA_FILE: {
                 return rawDataRecord.split(";");
             }
+            case EIS3_DATA_FILE: {
+                return rawDataRecord.split("|");
+            }
             default: return null;
         }
     }
 
     public static String extract(RecordType recordType) {
-        valueOf("EIS3");
+        valueOf("EIS2_DATA_FILE");
 
         return null;
     }
