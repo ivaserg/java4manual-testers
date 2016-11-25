@@ -17,7 +17,7 @@ public class EtlApp {
 
 
         for (RecordType recordType : RecordType.values()) {
-            load(transform(recordType, extract(recordType)));
+            load(transformBatch(recordType, extract(recordType)));
         }
 
 

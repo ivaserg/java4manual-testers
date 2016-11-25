@@ -5,6 +5,9 @@ package com.db.edu.etl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.db.edu.etl.RecordType.*;
 
 public class Controller {
@@ -26,13 +29,28 @@ public class Controller {
         }
     }
 
-    public static String extract(RecordType recordType) {
-        valueOf("EIS2_DATA_FILE");
+    public static List<String[]> transformBatch(RecordType recordType, String[] rawData) {
+
+        List<String[]> resultList = new ArrayList<>();
+
+        for (String rawDataString: rawData
+             ) {
+
+            resultList.add(Controller.transform(recordType, rawDataString));
+
+        }
+
+
+        return resultList;
+    }
+
+    public static String[] extract(RecordType recordType) {
+
 
         return null;
     }
 
-    public static boolean load(String[] data) {
+    public static boolean load(List<String[]> data) {
 
         return false;
     }
