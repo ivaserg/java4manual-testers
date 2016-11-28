@@ -16,9 +16,11 @@ public class EtlApp {
         logger.debug("Entering main method with args {}", args);
 
 
-        for (RecordType recordType : RecordType.values()) {
-            load(transformBatch(recordType, extract(recordType)));
-        }
+//        for (RecordType recordType : RecordType.values()) {
+//            load(transformBatch(recordType, extract(recordType)));
+//        }
+
+        Controller.transformBatch(RecordType.EIS1_DATA_FILE, new int[] {1,1, 2});
 
 
 

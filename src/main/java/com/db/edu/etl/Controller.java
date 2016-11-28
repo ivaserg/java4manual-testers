@@ -1,14 +1,14 @@
 package com.db.edu.etl;
 
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.db.edu.etl.RecordType.*;
+import static org.apache.commons.math3.util.Precision.round;
+
 
 public class Controller {
 
@@ -29,15 +29,31 @@ public class Controller {
         }
     }
 
+    public static int[] transformBatch(RecordType recordType, int[] rawData) {
+
+        if (rawData.length == 0) {
+            logger.info("Input array is empty");
+            return rawData;
+        }
+        int sum = 0;
+        float average = 0f;
+        for (int i: rawData) {
+            sum = sum + i;
+        }
+
+        average = (float) sum / rawData.length;
+
+        logger.info("The average value of data in the array is {}", round(average, 3)  );
+
+        return rawData;
+    }
+
     public static List<String[]> transformBatch(RecordType recordType, String[] rawData) {
 
         List<String[]> resultList = new ArrayList<>();
 
-        for (String rawDataString: rawData
-             ) {
-
+        for (String rawDataString: rawData) {
             resultList.add(Controller.transform(recordType, rawDataString));
-
         }
 
 
@@ -45,7 +61,6 @@ public class Controller {
     }
 
     public static String[] extract(RecordType recordType) {
-
 
         return null;
     }
