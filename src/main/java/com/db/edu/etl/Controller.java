@@ -25,6 +25,9 @@ public class Controller {
             case EIS3_DATA_FILE: {
                 return rawDataRecord.split("|");
             }
+            case ES4_DATA_FILE: {
+                return rawDataRecord.split(":");
+            }
             default: return null;
         }
     }
